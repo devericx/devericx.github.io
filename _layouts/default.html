@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mnjn</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+        <style>
+            @import url('https://rsms.me/interface/interface.css');
+
+            body {
+                font-family: Interface, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+                font-weight: 400;
+            }
+
+            .bold {
+                font-weight: 500;
+            }
+
+            .content {
+                margin: 4rem 0 0 2rem;
+            }
+
+            .link {
+                text-decoration: none;
+                color: #707070;
+            }
+
+            .link:hover {
+                text-decoration: underline;
+            }
+
+            @media only screen and (min-width: 600px) {
+                .content {
+                    margin: 5rem 0 0 4rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content max-width-1">
+            {{ content }}
+        </div>
+    </body>
+</html>
