@@ -1,3 +1,0 @@
-# mnjn
-
-My personal site
