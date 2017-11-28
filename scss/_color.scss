@@ -1,0 +1,13 @@
+$bg-color: #F5F5F5;
+$base-color: #101010;
+$link-color: #7C7C7C;
+
+html {
+    background-color: $bg-color;
+    color: $base-color;
+}
+
+a {
+    color: $link-color;
+    text-decoration: underline;
+}
