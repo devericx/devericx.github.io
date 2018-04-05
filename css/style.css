@@ -1,5 +1,6 @@
+@import url("https://rsms.me/inter/inter-ui.css");
 html {
-  font-family: "Karla", sans-serif;
+  font-family: "Karla", "Inter UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   font-size: 1vw; }
 
 h1 {
@@ -15,9 +16,15 @@ p {
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 27px; } }
+@media screen and (min-width: 1100px) {
+  h1 {
+    font-size: 49.5px; } }
 @media screen and (max-width: 700px) {
   p {
     font-size: 15.4px; } }
+@media screen and (min-width: 1100px) {
+  p {
+    font-size: 24.2px; } }
 html {
   background-color: #F5F5F5;
   color: #101010; }
@@ -26,7 +33,7 @@ a {
   color: #7C7C7C;
   text-decoration: underline; }
 
-h1 {
+h1, h2 {
   line-height: 5vw;
   margin: 2vw 0; }
 
@@ -102,6 +109,10 @@ p {
   h1 {
     line-height: 30px;
     margin: 12px 0; } }
+@media screen and (min-width: 1100px) {
+  h1 {
+    line-height: 55px;
+    margin: 22px 0; } }
 @media screen and (max-width: 700px) {
   #instagram {
     margin-right: 31.5px !important; }
@@ -110,6 +121,14 @@ p {
 
   #twitter img {
     height: 21px !important; } }
+@media screen and (min-width: 1100px) {
+  #instagram {
+    margin-right: 49.5px !important; }
+    #instagram img {
+      height: 33px !important; }
+
+  #twitter img {
+    height: 33px !important; } }
 @media screen and (max-width: 800px) {
   p {
     line-height: 24px; } }
