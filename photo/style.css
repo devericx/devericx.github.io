@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Helvetica Neue”, sans-serif;
+}
+
+.logo {
+    color: #458eff;
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    /* border: 1px solid #000; */
+    display: inline-block;
+}
+
+.sidebar p {
+    max-width: 10rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar h1 {
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    /* border: 1px solid black; */
+    flex: 1;
+    line-height: 0;
+   
+    -webkit-column-count: 3;
+    -webkit-column-gap:   5px;
+    -moz-column-count:    3;
+    -moz-column-gap:      5px;
+    column-count:         3;
+    column-gap:           5px;
+}
+
+.gallery figure {
+    display: inline-block;
+    -webkit-margin-before: 2.5px;
+    -webkit-margin-after: 2.5px;
+}
+
+img {
+    /* width: 100% !important; */
+    /* height: auto !important; */
+    opacity: 1;
+	transition: opacity 0.3s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
+.gallery figcaption {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 70rem) {
+    .gallery {
+        line-height: 0;
+        -webkit-column-count: 3;
+        -moz-column-count:    3;
+        column-count:         3;
+    }
+}
+
+@media screen and (max-width: 50rem) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-right: 0;
+    }
+
+    .sidebar h1 {
+        margin-bottom: 1rem;
+    }
+
+    .sidebar p {
+        max-width: 20rem;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .gallery {
+        line-height: 0;
+        -webkit-column-count: 2;
+        -moz-column-count:    2;
+        column-count:         2;
+    }
+}
