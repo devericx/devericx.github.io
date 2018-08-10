@@ -1,3 +1,4 @@
+from PIL import Image
 import os
 import sys
 
@@ -17,7 +18,9 @@ directories = []
 for (dirpath, dirnames, filenames) in os.walk("./"):
     directories.extend(dirnames)
 
-print(directories)
+if len(directories) == 0:
+    print("No directories available.")
+    exit(0)
 
 template = """
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -28,7 +31,17 @@ template = """
 </figure>
 """.strip()
 
+figures = []
+
 for d in directories:
     with cd(d):
-        filenames = [f for f in os.listdir("./") if os.path.isfile(os.path.join("./", f)) and f != ".DS_Store"]
-        print(sorted(filenames))
+        raw_filenames = [f for f in os.listdir("./") if os.path.isfile(os.path.join("./", f)) and f != ".DS_Store"]
+        sorted_filenames = sorted(raw_filenames)
+        for file in sorted_filenames:
+            im = Image.open(file)
+            width, height = im.size
+            im.close()
+            figure = template.format(path = d + "/" + file, size = str(width) + "x" + str(height), alt = file.replace("-", " ")[:-4])
+            figures.append(figure)
+            print(figures[0])
+            exit(0)
