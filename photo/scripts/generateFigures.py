@@ -1,6 +1,7 @@
 from PIL import Image
 import os
 import sys
+import pyperclip
 
 class cd:
     """Context manager for changing the current working directory"""
@@ -42,6 +43,14 @@ for d in directories:
             width, height = im.size
             im.close()
             figure = template.format(path = d + "/" + file, size = str(width) + "x" + str(height), alt = file.replace("-", " ")[:-4])
+            figure = "<!--### {} ###-->\n".format(file) + figure
             figures.append(figure)
-            print(figures[0])
-            exit(0)
+
+all_figures = ""
+
+for figure in figures:
+    all_figures += figure + "\n\n"
+all_figures = all_figures.strip()
+print(all_figures)
+pyperclip.copy(all_figures)
+print("All figures copied to clipboard.")
