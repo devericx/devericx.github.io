@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .nav {
     position: relative;
     transition: all 0.25s ease;
